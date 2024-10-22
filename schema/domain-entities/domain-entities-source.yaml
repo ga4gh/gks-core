@@ -69,10 +69,39 @@ $defs:
         default: Phenotype
         description: MUST be "Phenotype".
 
+
+# Sequence Feature related domain entities
+  SequenceFeature:
+    type: object
+    inherits: gks.core-im:DomainEntity
+    maturity: draft
+    description: >-
+      A sequence feature is an extent of 'located' biological sequence (gneomic, transcript, or protein),
+      whose identity is determined by both its inherent sequence (ordering of monomeric units) and its 
+      position (start and end coordinates based on alignment with some reference).
+    $comment: >-
+      Sequence Features can represent instances of a identified functional or structural elements (e.g. 
+      a gene, transcript, promoter, exon), or arbitrary extents of sequence with no defined type, 
+      function, or formal identifier (e.g. GRCh38.1 X:337456-337484).
+    properties:
+      type:
+        type: string
+        const: "SequenceFeature"
+        default: "SequenceFeature"
+        description: MUST be "SequenceFeature"
+    subtype:
+      $ref: "#/$defs/Coding"
+      description: >-
+        A more specific type of sequence feature (e.g. transcript, promoter, exon).
+      $comment: >-
+        This attribute can be used to report a more specific type for the Sequecnce Feature, in cases where
+        the model does not define subclasses for these types. Implementers can define their own set
+        of feature type codes/terms, based on the needs of their application.
+        
 # Gene related domain entities
   Gene:
     type: object
-    inherits: gks.core-im:DomainEntity
+    inherits: SequenceFeature
     maturity: draft
     description: >-
       A basic physical and functional unit of heredity.
