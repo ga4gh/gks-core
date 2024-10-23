@@ -408,16 +408,13 @@ $defs:
         const: EvidenceLine
         default: EvidenceLine
         description: Must be "EvidenceLine"
-      # Note that the `targetProposition` property below is a proposed addition to the EvidenceLine class that is not
-      # yet implemented in the core IM - but included as below to help clarify the meaning and utility of this class.
-      #
-      # targetProposition:
-      #   $ref: "#/$defs/Proposition"
-      #   description: >-
-      #     The possible fact against which evidence items contained in an Evidence Line were collectively evaluated,
-      #     in determining the overall strength and direction of support they provide. For example, in an ACMG Guideline-based
-      #     assessment of variant pathogenicity, the support provided by distinct lines of evidence are assessed against
-      #     a target proposition that the variant is pathogenic for a specific disease.
+      targetProposition:
+        $ref: "#/$defs/Proposition"
+        description: >-
+          The possible fact against which evidence items contained in an Evidence Line were collectively evaluated,
+          in determining the overall strength and direction of support they provide. For example, in an ACMG Guideline-based
+          assessment of variant pathogenicity, the support provided by distinct lines of evidence are assessed against
+          a target proposition that the variant is pathogenic for a specific disease.
       hasEvidenceItems:
         type: array
         ordered: false
@@ -446,6 +443,7 @@ $defs:
         oneOf:
           - $ref: "#/$defs/Coding"
           - $ref: "#/$defs/IRI"
+          - string                          # This is likely not the right way to specify that a string value is allowed for this attribute . . . . please fix
         description: >-
           The strength of support that an Evidence Line is determined to provide for or against its target Proposition,
           evaluated relative to the direction indicated by the directionOfEvidenceProvided value.
@@ -503,10 +501,7 @@ $defs:
         description: The relationship declared to hold between the subject and the object of the Statement.
         $comment: >-
           When applied to represent a particular type of Statement (via 'Profiling'), implementers can define a value
-          set of predicates for the relationships relevant in the domain - ideally using terms from community ontologies
-          or terminologies. For example, in a  'Variant Pathogenicity Statement' Profile, the predicate value set might
-          include terms from the GENO ontology defining  'pathogenic for condition', 'benign for condition', and
-          'uncertain significance for condition' relationships (GENO:0000840, GENO:0000843, GENO:0000845).
+          set of predicates for the relationships relevant in the domain.
       object:
         oneOf:
         - type: object
@@ -619,6 +614,7 @@ $defs:
         oneOf:
           - $ref: "#/$defs/Coding"
           - $ref: "#/$defs/IRI"
+          - string                                # This is likely not the right way to specify that a string value is allowed for this attribute . . . . please fix
         description: >-
           A single term or phrase summarizing the outcome of direction and strength
           assessments of a Statement's proposition, in terms of a classification of
@@ -880,54 +876,50 @@ $defs:
       - name
       - value
 
-
-  # Note that the `Proposition` class below is a proposed addition to the model that would be used by both the Statement
-  # and EvidenceLine classes, but is not yet implemented in the core IM. See the commented out attributes on these classes for more info.
-  #
-  # Proposition:
-  #   inherits: Entity
-  #   maturity: draft
-  #   type: object
-  #   description: >-
-  #     The abstract entity representing a possible fact that may be put forth as true, or subjected to
-  #     an evidence-based assessment, by a Statement. As abstract entities, their identity and existence
-  #     are independent of space and time, and whether they are ever asserted to be true by some agent.
-  #     Propositions may be used in two contexts; (1) by Statements that assert them to be true or false,
-  #     or describe the overall level of confidence/evidence for or against them; (2) by Evidence Lines that
-  #     report the direction and strength of an evidence-based argument for the Proposition.
-  #   properties:
-  #     type:
-  #       extends: type
-  #       const: Proposition
-  #       default: Proposition
-  #       description: Must be "Proposition"
-  #     propositionText:
-  #       type: string
-  #       description: >-
-  #        A natural-language expression of the Proposition's meaning. e.g. "BRCA2 c.8023A>G is pathogenic for
-  #        Breast Cancer".
-  #     subject:
-  #       type:
-  #         $ref: "#/$defs/Entity"
-  #       description: The Entity or concept about which the Proposition is made.
-  #     predicate:
-  #       type:
-  #         $ref: "#/$defs/Coding"
-  #       description: The relationship asserted to hold between the subject and the object of the Proposition.
-  #     object:
-  #       type:
-  #         $ref: "#/$defs/Entity"
-  #       description: An Entity that is related to the subject of a Proposition via its predicate.
-  #     negated:
-  #       type: boolean
-  #       description: >-
-  #         A boolean flag set to 'true' to represent a negation of the proposition expressed by the subject, predicate,
-  #         object, and qualifiers (e.g. that "Variant X is NOT pathogenic for Disease Y")/
-  #   heritableRequired:
-  #     - subject
-  #     - predicate
-  #     - object
-
+  Proposition:
+    inherits: Entity
+    maturity: draft
+    type: object
+    description: >-
+      The abstract entity representing a possible fact that may be put forth as true, or subjected to
+      an evidence-based assessment, by a Statement. As abstract entities, their identity and existence
+      are independent of space and time, and whether they are ever asserted to be true by some agent.
+      Propositions may be used in two contexts; (1) by Statements that assert them to be true or false,
+      or describe the overall level of confidence/evidence for or against them; (2) by Evidence Lines that
+      report the direction and strength of an evidence-based argument for the Proposition.
+    heritableProperties:
+      type:
+        extends: type
+        const: Proposition
+        default: Proposition
+        description: Must be "Proposition"
+      propositionText:
+        type: string
+        description: >-
+         A natural-language expression of the Proposition's meaning. e.g. "BRCA2 c.8023A>G is pathogenic for
+         Breast Cancer".
+      subject:
+        oneOf:
+        - type: object
+        description: The Entity or concept about which the Proposition is made.
+      predicate:
+        type: string
+        description: The relationship declared to hold between the subject and the object of the Statement.
+        $comment: >-
+          When applied to represent a particular type of Proposition (via 'Profiling'), implementers can define a value
+          set of predicates for the relationships relevant in the domain.
+      object:
+        oneOf:
+        - type: object
+        description: An Entity or concept that is related to the subject of a Proposition via its predicate.
+        $comment: >-
+          The object of a Proposition can be any Entity or concept that is related to the subject, e.g. for Genetic
+          Variation subjects the object is often a disease, drug, gene, molecular consequence, functional impact on
+          gene or protein.      
+    heritableRequired:
+      - subject
+      - predicate
+      - object
 
   Coding:
     type: object
