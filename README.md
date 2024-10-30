@@ -1,26 +1,26 @@
-# gks-common
+# gks-core
 
-Common classes and schemas used by all GKS specifications (ie. VR, Cat-VRS, VA, etc..)
+Core classes and schemas used by all GKS specifications (ie. VR, Cat-VRS, VA, etc..)
 
 For more info
 [GKS Repository Organization](https://docs.google.com/document/d/16SrjqPJ1ct_z8OK6kNcu3KO1ia6LAyVriSbuDLXRAI8/edit)
 
 ## Installing for development
 
-Fork the repo at <https://github.com/ga4gh/gks-common>.
+Fork the repo at <https://github.com/ga4gh/gks-core>.
 
-    git clone git@github.com:YOUR_GITHUB_ID/gks-common.git
-    cd gks-common
+    git clone git@github.com:YOUR_GITHUB_ID/gks-core.git
+    cd gks-core
     make devready
     source venv/3.12/bin/activate
     pre-commit install
 
 ## Contributing to the schema
 
-GKS Common uses the following source documents for JSON Schema:
+GKS Core uses the following source documents for JSON Schema:
 
-* [core-im/core-im-source.yaml](./schema/gks-common/core-im/core-im-source.yaml)
-* [domain-entities-source.yaml](./schema/gks-common/domain-entities/domain-entities-source.yaml)
+* [core-im/core-im-source.yaml](./schema/gks-core/core-im/core-im-source.yaml)
+* [domain-entities-source.yaml](./schema/gks-core/domain-entities/domain-entities-source.yaml)
 
 To create the corresponding def and json files after making changes to any of of the
 source documents, from the root directory:
