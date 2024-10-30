@@ -169,7 +169,7 @@ $defs:
         default: Method
         description: MUST be "Method".
       subtype:
-        $ref: "#/$defs/Coding"
+        $ref: "#/$defs/MappableConcept"
         description: >-
           A specific type of method that a Method instance represents (e.g. 'Variant Interpretation
           Guideline', or 'Experimental Protocol').
@@ -205,7 +205,7 @@ $defs:
         default: Document
         description: Must be "Document"
       subtype:
-        $ref: "#/$defs/Coding"
+        $ref: "#/$defs/MappableConcept"
         description: >-
           A specific type of document that a Document instance represents (e.g.  'publication',
           'patent', 'pathology report')
@@ -271,7 +271,7 @@ $defs:
       Activities may use, generate, modify, move, or destroy one or more entities.
     heritableProperties:
       subtype:
-        $ref: "#/$defs/Coding"
+        $ref: "#/$defs/MappableConcept"
         description: >-
           A specific type of activity the Activity instance represents.
         $comment: >-
@@ -326,7 +326,7 @@ $defs:
           If multiple Agents contributed to an entity, a separate Contribution instances MUST be
           created for each.
       activityType:
-        $ref: "#/$defs/Coding"
+        $ref: "#/$defs/MappableConcept"
         description: >-
           The specific type of activity performed or role played by an agent in making the contribution
           (e.g. for a publication, agents may contribute as a primary author, editor, figure designer,
@@ -441,10 +441,7 @@ $defs:
           The direction of support that the Evidence Line is determined to provide toward its target Proposition
           (supports, disputes, neutral)
       strengthOfEvidenceProvided:
-        oneOf:
-          - $ref: "#/$defs/Coding"
-          - $ref: "#/$defs/IRI"
-          - string                          # This is likely not the right way to specify that a string value is allowed for this attribute . . . . please fix
+        $ref: "#/$defs/MappableConcept"
         description: >-
           The strength of support that an Evidence Line is determined to provide for or against its target Proposition,
           evaluated relative to the direction indicated by the directionOfEvidenceProvided value.
@@ -573,9 +570,7 @@ $defs:
           (e.g. 'high confidence' vs 'low confidence', or 'strong evidence' vs 'weak evidence') - or they can choose
           values that don't commit to one or the other if they don't want to make the distinction (e.g. 'high' vs
           'medium' vs 'low').
-        oneOf:
-          - $ref: "#/$defs/Coding"
-          - $ref: "#/$defs/IRI"
+        $ref: "#/$defs/MappableConcept"
       score:
         type: number
         description: >-
@@ -612,10 +607,7 @@ $defs:
       #     the possible fact asserted or evaluated by a Statement in a separate 'Proposition' object - instead of
       #     using the 'subject', 'predicate', 'object', and 'qualifier' properties defined in the Statement object itself.
       classification:
-        oneOf:
-          - $ref: "#/$defs/Coding"
-          - $ref: "#/$defs/IRI"
-          - string                                # This is likely not the right way to specify that a string value is allowed for this attribute . . . . please fix
+        $ref: "#/$defs/MappableConcept"
         description: >-
           A single term or phrase summarizing the outcome of direction and strength
           assessments of a Statement's proposition, in terms of a classification of
@@ -673,7 +665,7 @@ $defs:
         default: DataSet
         description: MUST be "DataSet".
       subtype:
-        $ref: "#/$defs/Coding"
+        $ref: "#/$defs/MappableConcept"
         description: >-
           A specific type of data set the DataSet instance represents (e.g. a
           'clinical data set', a 'sequencing data set', a 'gene expression data set',
@@ -726,8 +718,8 @@ $defs:
     heritableProperties:
       focus:
         oneOf:
-          - $ref: "#/$defs/DomainEntity"
-          - $ref: "#/$defs/Coding"
+          - $ref: "#/$defs/Entity"
+          - $ref: "#/$defs/MappableConcept"
           - $ref: "#/$defs/IRI"
         description: >-
           The specific subject or experimental unit in a Study that data in the StudyResult object is about -
