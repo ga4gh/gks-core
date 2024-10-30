@@ -4,6 +4,7 @@ The Extension class provides entities with a means to include additional attribu
 
 **Information Model**
 
+Some Extension attributes are inherited from :ref:`Element`.
 
 .. list-table::
    :class: clean-wrap
@@ -15,6 +16,10 @@ The Extension class provides entities with a means to include additional attribu
       - Type
       - Limits
       - Description
+   *  - id
+      - string
+      - 0..1
+      - The 'logical' identifier of the data element in the system of record, e.g. a UUID.  This 'id' is unique within a given system, but may or may not be globally unique outside the system. It is used within a system to reference an object from another.
    *  - name
       - string
       - 1..1
