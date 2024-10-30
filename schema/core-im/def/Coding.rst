@@ -4,6 +4,7 @@ A structured representation of a code for a defined concept in a terminology or 
 
 **Information Model**
 
+Some Coding attributes are inherited from :ref:`Element`.
 
 .. list-table::
    :class: clean-wrap
@@ -15,6 +16,10 @@ A structured representation of a code for a defined concept in a terminology or 
       - Type
       - Limits
       - Description
+   *  - id
+      - string
+      - 0..1
+      - The 'logical' identifier of the Entity in the system of record, e.g. a UUID.  This 'id' is unique within a given system, but may or may not be globally unique outside the system. It is used within a system to reference an object from another.
    *  - label
       - string
       - 0..1
