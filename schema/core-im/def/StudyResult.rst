@@ -61,7 +61,7 @@ Some StudyResult attributes are inherited from :ref:`InformationEntity`.
       - 0..1
       - Provenance metadata about a specific concrete record of information as encoded/serialized in a particular data set or object (as opposed to provenance about the abstract information content the encoding carries).
    *  - focus
-      - :ref:`DomainEntity` | :ref:`Coding` | :ref:`IRI`
+      - :ref:`Entity` | :ref:`MappableConcept` | :ref:`IRI`
       - 0..1
       - The specific subject or experimental unit in a Study that data in the StudyResult object is about - e.g. a particular variant in a population allele frequency dataset like ExAC or gnomAD.
    *  - sourceDataSet

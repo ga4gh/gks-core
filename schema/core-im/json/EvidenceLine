@@ -117,6 +117,10 @@
          "default": "EvidenceLine",
          "description": "Must be \"EvidenceLine\""
       },
+      "targetProposition": {
+         "$ref": "/ga4gh/schema/gks-common/1.x/core-im/json/Proposition",
+         "description": "The possible fact against which evidence items contained in an Evidence Line were collectively evaluated, in determining the overall strength and direction of support they provide. For example, in an ACMG Guideline-based assessment of variant pathogenicity, the support provided by distinct lines of evidence are assessed against a target proposition that the variant is pathogenic for a specific disease."
+      },
       "hasEvidenceItems": {
          "type": "array",
          "ordered": false,
@@ -155,14 +159,7 @@
          "description": "The direction of support that the Evidence Line is determined to provide toward its target Proposition (supports, disputes, neutral)"
       },
       "strengthOfEvidenceProvided": {
-         "oneOf": [
-            {
-               "$ref": "/ga4gh/schema/gks-common/1.x/core-im/json/Coding"
-            },
-            {
-               "$ref": "/ga4gh/schema/gks-common/1.x/core-im/json/IRI"
-            }
-         ],
+         "$ref": "/ga4gh/schema/gks-common/1.x/core-im/json/MappableConcept",
          "description": "The strength of support that an Evidence Line is determined to provide for or against its target Proposition, evaluated relative to the direction indicated by the directionOfEvidenceProvided value.",
          "$comment": "Values of this attribute can be defined by for a given profile based on domain/application needs, but should be framed in qualitative terms (e.g. 'strong', 'moderate', 'weak'). The 'scoreOfEvidenceProvided' attribute can be used to report quantitative assessments of evidence provided."
       },

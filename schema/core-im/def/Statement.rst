@@ -81,7 +81,7 @@ Some Statement attributes are inherited from :ref:`InformationEntity`.
       - 0..1
       - A term indicating whether the Statement supports, disputes, or remains neutral w.r.t. the validity of the Proposition it evaluates.
    *  - strength
-      - :ref:`Coding` | :ref:`IRI`
+      - :ref:`MappableConcept`
       - 0..1
       - A term used to report the strength of a Proposition's assessment in the direction indicated (i.e. how strongly supported or disputed the Proposition is believed to be).  Implementers may choose to frame a strength assessment in terms of how *confident* an agent is that the Proposition is true or false, or in terms of the *strength of all evidence* they believe supports or disputes it.
    *  - score
@@ -93,7 +93,7 @@ Some Statement attributes are inherited from :ref:`InformationEntity`.
       - 0..1
       - A natural-language expression of what a Statement asserts to be true.
    *  - classification
-      - :ref:`Coding` | :ref:`IRI`
+      - :ref:`MappableConcept`
       - 0..1
       - A single term or phrase summarizing the outcome of direction and strength assessments of a Statement's proposition, in terms of a classification of its subject.
    *  - hasEvidenceLines
