@@ -999,7 +999,7 @@ $defs:
       - coding
 
   MappableConcept:
-    inherits: Entity
+    inherits: Element
     type: object
     maturity: trial use
     description: >-
@@ -1007,7 +1007,7 @@ $defs:
     properties:
       label:
         type: string
-        description: A primary name for the entity.
+        description: A primary name for the concept.
       mappings:
         type: array
         ordered: false
@@ -1016,6 +1016,8 @@ $defs:
         description: >-
           A list of mappings to concepts in terminologies or code systems. Each mapping should
           include a coding and a relation.
+    required:
+      - label
 
   Extension:
     inherits: Element
