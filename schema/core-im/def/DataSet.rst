@@ -65,7 +65,7 @@ Some DataSet attributes are inherited from :ref:`InformationEntity`.
       - 1..1
       - MUST be "DataSet".
    *  - subtype
-      - :ref:`Coding`
+      - :ref:`MappableConcept`
       - 0..1
       - A specific type of data set the DataSet instance represents (e.g. a 'clinical data set', a 'sequencing data set', a 'gene expression data set', a 'genome annotation data set')
    *  - releaseDate

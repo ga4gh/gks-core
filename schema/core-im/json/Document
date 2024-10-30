@@ -118,7 +118,7 @@
          "description": "Must be \"Document\""
       },
       "subtype": {
-         "$ref": "/ga4gh/schema/gks-common/1.x/core-im/json/Coding",
+         "$ref": "/ga4gh/schema/gks-common/1.x/core-im/json/MappableConcept",
          "description": "A specific type of document that a Document instance represents (e.g.  'publication', 'patent', 'pathology report')",
          "$comment": "This attribute can be used to report a specific type for the Document, in cases where a model does not define Document subclasses for this purpose.  Implementers can define their own set of document type codes/terms, to match the needs of their application."
       },

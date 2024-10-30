@@ -41,7 +41,7 @@ Some Activity attributes are inherited from :ref:`Entity`.
       - 0..m
       - A list of extensions to the Entity, that allow for capture of information not directly supported by elements defined in the model.
    *  - subtype
-      - :ref:`Coding`
+      - :ref:`MappableConcept`
       - 0..1
       - A specific type of activity the Activity instance represents.
    *  - date

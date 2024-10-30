@@ -873,7 +873,6 @@ $defs:
   Proposition:
     inherits: Entity
     maturity: draft
-    type: object
     description: >-
       The abstract entity representing a possible fact that may be put forth as true, or subjected to
       an evidence-based assessment, by a Statement. As abstract entities, their identity and existence

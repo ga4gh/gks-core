@@ -65,7 +65,7 @@ Some Document attributes are inherited from :ref:`InformationEntity`.
       - 1..1
       - Must be "Document"
    *  - subtype
-      - :ref:`Coding`
+      - :ref:`MappableConcept`
       - 0..1
       - A specific type of document that a Document instance represents (e.g.  'publication', 'patent', 'pathology report')
    *  - title

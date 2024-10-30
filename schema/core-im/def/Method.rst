@@ -65,7 +65,7 @@ Some Method attributes are inherited from :ref:`InformationEntity`.
       - 1..1
       - MUST be "Method".
    *  - subtype
-      - :ref:`Coding`
+      - :ref:`MappableConcept`
       - 0..1
       - A specific type of method that a Method instance represents (e.g. 'Variant Interpretation Guideline', or 'Experimental Protocol').
    *  - license
