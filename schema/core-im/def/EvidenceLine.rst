@@ -1,3 +1,9 @@
+
+.. warning:: This data class is at a **draft** maturity level and may change
+    significantly in future releases. Maturity levels are described in 
+    the :ref:`maturity-model`.
+                      
+                    
 **Computational Definition**
 
 An independent, evidence-based argument that may support or refute the validity of a specific proposition. The strength and direction of this argument is based on an interpretation of one or more pieces of information as evidence for or against the target proposition.

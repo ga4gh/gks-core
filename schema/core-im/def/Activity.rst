@@ -1,3 +1,9 @@
+
+.. warning:: This data class is at a **draft** maturity level and may change
+    significantly in future releases. Maturity levels are described in 
+    the :ref:`maturity-model`.
+                      
+                    
 **Computational Definition**
 
 An action or set of actions performed by an agent, that occurs over a period of time. Activities may use, generate, modify, move, or destroy one or more entities.

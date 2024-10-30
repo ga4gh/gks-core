@@ -1,3 +1,9 @@
+
+.. warning:: This data class is at a **draft** maturity level and may change
+    significantly in future releases. Maturity levels are described in 
+    the :ref:`maturity-model`.
+                      
+                    
 **Computational Definition**
 
 A set of instructions that specify how to achieve some objective.

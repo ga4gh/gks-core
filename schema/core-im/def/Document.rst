@@ -1,3 +1,9 @@
+
+.. warning:: This data class is at a **draft** maturity level and may change
+    significantly in future releases. Maturity levels are described in 
+    the :ref:`maturity-model`.
+                      
+                    
 **Computational Definition**
 
 A collection of information, usually in a text-based or graphic human-readable form, intended to be read and understood together as a whole.

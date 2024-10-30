@@ -1,3 +1,9 @@
+
+.. warning:: This data class is at a **draft** maturity level and may change
+    significantly in future releases. Maturity levels are described in 
+    the :ref:`maturity-model`.
+                      
+                    
 **Computational Definition**
 
 An abstract (non-physical) entity that is about something - representing the underlying 'information content' conveyed by physical or digital information artifacts like books, web pages, data tables, or photographs.
