@@ -1,14 +1,13 @@
 $schema: "https://json-schema.org/draft/2020-12/schema"
-$id: "https://w3id.org/ga4gh/schema/gks-common/1.x/core-im/core-im-source.yaml"
-title: GKS Commons Core Information Class Definitions
-
+$id: "https://w3id.org/ga4gh/schema/gks-core/1.x/gks-core-source.yaml"
+title: GKS Core Class Definitions
 
 $defs:
   Entity:
     maturity: trial use
     description: Anything that exists, has existed, or will exist.
     $comment: >-
-      Entity is the root class of the 'gks-common' core information model. All common classes that
+      Entity is the root class of the 'gks-core' information model. All core classes that
       have ids and other general metadata like label, description, type, or extensions descend from
       this class and inherit its attributes.
     heritableProperties:
@@ -19,7 +18,7 @@ $defs:
           unique within a given system, but may or may not be globally unique outside the system. It
           is used within a system to reference an object from another.
         $comment: >-
-          Note that it is common for implementers to create their own internal logical ids -
+          Note that it is core for implementers to create their own internal logical ids -
           typically a serially or randomly generated value like a UUID that is assigned to the
           data object as it is created in a system. But an implementer may choose to re-use an
           existing, globally unique id from an external system or authority for this purpose

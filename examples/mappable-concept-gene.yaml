@@ -1,12 +1,5 @@
 id: HGNC:1101
 label: BRCA2
-description: BRCA2 DNA repair associated
-alternativeLabels:
-- FAD
-- FAD1
-- BRCC2
-- XRCC11
-type: Gene
 mappings:
 - coding: 
     code: HGNC:1101
@@ -20,11 +13,3 @@ mappings:
     code: "675"
     system: https://www.ncbi.nlm.nih.gov/gene/
   relation: closeMatch
-extensions:
-- name: gene_type
-  value: protein coding
-- name: previous_symbols
-  value:
-  - FANCD1
-  - FACD
-  - FANCD

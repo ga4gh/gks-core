@@ -1,6 +1,6 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/gks-common/1.x/core-im/json/MappableConcept",
+   "$id": "https://w3id.org/ga4gh/schema/gks-core/1.x/json/MappableConcept",
    "title": "MappableConcept",
    "type": "object",
    "maturity": "trial use",
@@ -18,7 +18,7 @@
          "type": "array",
          "ordered": false,
          "items": {
-            "$ref": "/ga4gh/schema/gks-common/1.x/core-im/json/ConceptMapping"
+            "$ref": "/ga4gh/schema/gks-core/1.x/json/ConceptMapping"
          },
          "description": "A list of mappings to concepts in terminologies or code systems. Each mapping should include a coding and a relation."
       }
