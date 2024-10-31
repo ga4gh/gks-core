@@ -13,3 +13,6 @@ mappings:
     code: "675"
     system: https://www.ncbi.nlm.nih.gov/gene/
   relation: closeMatch
+extensions:
+- name: "AlsoKnownAs"
+  value: "FAD; FACD; FAD1; GLM3; BRCC2; FANCD; PNCA2; FANCD1; XRCC11; BROVCA2"
