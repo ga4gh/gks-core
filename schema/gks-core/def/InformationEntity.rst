@@ -1,9 +1,3 @@
-
-.. warning:: This data class is at a **draft** maturity level and may change
-    significantly in future releases. Maturity levels are described in 
-    the :ref:`maturity-model`.
-                      
-                    
 **Computational Definition**
 
 An abstract (non-physical) entity that is about something - representing the underlying 'information content' conveyed by physical or digital information artifacts like books, web pages, data tables, or photographs.
@@ -47,7 +41,7 @@ Some InformationEntity attributes are inherited from :ref:`Entity`.
       - 0..m
       - A list of extensions to the Entity, that allow for capture of information not directly supported by elements defined in the model.
    *  - specifiedBy
-      - :ref:`Method` | :ref:`IRI`
+      - :ref:`Method` | :ref:`iriReference`
       - 0..1
       - A specification that describes all or part of the process that led to creation of the Information Entity
    *  - contributions
@@ -55,7 +49,7 @@ Some InformationEntity attributes are inherited from :ref:`Entity`.
       - 0..m
       - Specific actions taken by an Agent toward the creation, modification, validation, or deprecation of an Information Entity.
    *  - reportedIn
-      - :ref:`Document` | :ref:`IRI`
+      - :ref:`Document` | :ref:`iriReference`
       - 0..m
       - A document in which the the Information Entity is reported.
    *  - dateAuthored

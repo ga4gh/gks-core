@@ -1,9 +1,3 @@
-
-.. warning:: This data class is at a **draft** maturity level and may change
-    significantly in future releases. Maturity levels are described in 
-    the :ref:`maturity-model`.
-                      
-                    
 **Computational Definition**
 
 A structured representation of a code for a defined concept in a terminology or code system.
@@ -43,6 +37,6 @@ Some Coding attributes are inherited from :ref:`Element`.
       - 0..1
       - Version of the terminology or code system that provided the code.
    *  - code
-      - :ref:`Code`
+      - :ref:`code`
       - 1..1
       - A symbol uniquely identifying the concept, as in a syntax defined by the code system. CURIE format is preferred where possible (e.g. 'SO:0000704' is the CURIE form of the Sequence Ontology code for 'gene').

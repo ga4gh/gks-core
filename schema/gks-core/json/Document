@@ -40,10 +40,10 @@
       "specifiedBy": {
          "oneOf": [
             {
-               "$ref": "/ga4gh/schema/gks-core/1.x/json/IRI"
+               "$ref": "/ga4gh/schema/gks-core/1.x/json/Method"
             },
             {
-               "$ref": "/ga4gh/schema/gks-core/1.x/json/Method"
+               "$ref": "/ga4gh/schema/gks-core/1.x/json/iriReference"
             }
          ],
          "description": "A specification that describes all or part of the process that led to creation of the Information Entity",
@@ -67,7 +67,7 @@
                   "$ref": "/ga4gh/schema/gks-core/1.x/json/Document"
                },
                {
-                  "$ref": "/ga4gh/schema/gks-core/1.x/json/IRI"
+                  "$ref": "/ga4gh/schema/gks-core/1.x/json/iriReference"
                }
             ]
          },
