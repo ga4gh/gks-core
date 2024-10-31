@@ -18,7 +18,7 @@ $defs:
           unique within a given system, but may or may not be globally unique outside the system. It
           is used within a system to reference an object from another.
         $comment: >-
-          Note that it is core for implementers to create their own internal logical ids -
+          Note that it is common for implementers to create their own internal logical ids -
           typically a serially or randomly generated value like a UUID that is assigned to the
           data object as it is created in a system. But an implementer may choose to re-use an
           existing, globally unique id from an external system or authority for this purpose
@@ -514,13 +514,13 @@ $defs:
       #  Statement profile. e.g. in the VariantPathogenicityStatement profile, it is specialized into
       #  'modeOfInheritanceQualifier' and 'geneContextQualifier' attributes.
       #  We are commenting out this property for now to avoid its unwanted inheritance in Statement profiles
-      #  that import the core-im. We will re-instate this property once we determine how the modeling framework
+      #  that import the gks-core. We will re-instate this property once we determine how the modeling framework
       #  and tools can support formal specification of the conceptual specialization that is happening here.
       #
       #     qualifier:
       #       type: object
       #       description: >-
-      #         An additional piece of information that extends or refines the meaning of the a Statement's core
+      #         An additional piece of information that extends or refines the meaning of the a Statement's common
       #         subject-predicate-object 'triple' - by providing additional details, precision, or constraining
       #         the statement to apply in a particular context.
       #       $comment: >-
@@ -595,7 +595,7 @@ $defs:
           semantics that uses the subject-predicate-object-qualifier pattern.
 
       # Note that the `proposition` property below is a proposed addition to the Statement class that is not yet
-      # implemented in the core IM, but included as below to illustrate a possible alternative modeling pattern.
+      # implemented in the Core IM, but included as below to illustrate a possible alternative modeling pattern.
       #
       # proposition:
       #   $ref: "#/$defs/Proposition"
@@ -738,7 +738,7 @@ $defs:
       #  For example, in the the CohortAlleleFrequencyStudyResult profile, it is specialized into 'focusAlleleCount',
       # 'focusAlleleFrequency', and 'locuslAlleleCount' attributes.
       #  We are commenting out this property for now to avoid its unwanted inheritance in StudyResult profiles
-      #  that import the core-im. We will re-instate this property once we determine how the modeling framework
+      #  that import the gks-core. We will re-instate this property once we determine how the modeling framework
       #  and tools can support formal specificaiton of the conceptual specialization that is happening here.
       #
       # dataItem:
