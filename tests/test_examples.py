@@ -32,6 +32,7 @@ def test_examples():
     with open(test_path / 'test_definitions.yaml') as def_file:
         test_spec = yaml.safe_load(def_file)
     for test in test_spec['tests']:
+        print (f"Testing {test['test_file']}")
         with open(examples_path / test['test_file']) as datafile:
             data = yaml.safe_load(datafile)
         class_validator = validator[test['definition']]

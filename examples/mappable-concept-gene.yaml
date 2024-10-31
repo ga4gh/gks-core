@@ -1,0 +1,15 @@
+id: HGNC:1101
+label: BRCA2
+mappings:
+- coding: 
+    code: HGNC:1101
+    system: https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/
+  relation: exactMatch
+- coding: 
+    code: ENSG00000139618
+    system: https://www.ensembl.org/id/
+  relation: closeMatch
+- coding: 
+    code: "675"
+    system: https://www.ncbi.nlm.nih.gov/gene/
+  relation: closeMatch

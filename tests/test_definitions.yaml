@@ -1,9 +1,9 @@
 tests:
-- test_file: core-im/coding.yaml
+- test_file: simple-coding.yaml
   description: simple coding example
-  schema: core-im
+  schema: gks-core
   definition: Coding
-- test_file: domain-entities/gene.yaml
-  description: simple gene example
-  schema: domain-entities
-  definition: Gene
+- test_file: mappable-concept-gene.yaml
+  description: mappable concept gene example
+  schema: gks-core
+  definition: MappableConcept
