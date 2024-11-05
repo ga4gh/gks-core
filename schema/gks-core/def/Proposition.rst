@@ -1,3 +1,9 @@
+
+.. warning:: This data class is at a **draft** maturity level and may change
+    significantly in future releases. Maturity levels are described in 
+    the :ref:`maturity-model`.
+                      
+                    
 **Computational Definition**
 
 The abstract entity representing a possible fact that may be put forth as true, or subjected to an evidence-based assessment, by a Statement. As abstract entities, their identity and existence are independent of space and time, and whether they are ever asserted to be true by some agent. Propositions may be used in two contexts; (1) by Statements that assert them to be true or false, or describe the overall level of confidence/evidence for or against them; (2) by Evidence Lines that report the direction and strength of an evidence-based argument for the Proposition.
