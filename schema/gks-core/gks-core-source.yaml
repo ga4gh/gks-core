@@ -376,7 +376,6 @@ $defs:
           modification, or administrative management of a data record or object.
 
   EvidenceLine:
-    type: object
     inherits: InformationEntity
     maturity: draft
     description: >-
@@ -402,7 +401,7 @@ $defs:
       *all information reported in a publication for a specific study* - which can encompass many different results
       and evidence types that under more fine-grained interpretation approaches might be split apart and assessed as
       separate lines of evidence.
-    properties:
+    heritableProperties:
       type:
         extends: type
         const: EvidenceLine
