@@ -29,6 +29,10 @@ Some MappableConcept attributes are inherited from :ref:`Element`.
       - :ref:`Extension`
       - 0..m
       - A list of extensions to the Entity, that allow for capture of information not directly supported by elements defined in the model.
+   *  - conceptType
+      - string
+      - 0..1
+      - A term indicating the type of concept being represented by the MappableConcept.
    *  - label
       - string
       - 1..1

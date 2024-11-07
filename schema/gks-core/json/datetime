@@ -1,0 +1,9 @@
+{
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "$id": "https://w3id.org/ga4gh/schema/gks-core/1.x/json/datetime",
+   "title": "datetime",
+   "type": "string",
+   "maturity": "draft",
+   "description": "A string is valid against this format if it represents a date-time in the following format: YYYY:MM::DDThh:mm:ss.sTZD.",
+   "format": "date-time"
+}

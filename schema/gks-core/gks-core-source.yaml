@@ -95,7 +95,7 @@ $defs:
       specifiedBy:
         oneOf:
         - $ref: "#/$defs/Method"
-        - $ref: "#/$defs/IRI"
+        - $ref: "#/$defs/iriReference"
         description: >-
           A specification that describes all or part of the process that led to creation of the
           Information Entity
@@ -123,7 +123,7 @@ $defs:
         items:
           oneOf:
           - $ref: "#/$defs/Document"
-          - $ref: "#/$defs/IRI"
+          - $ref: "#/$defs/iriReference"
         description: A document in which the the Information Entity is reported.
       dateAuthored:
         type: string
@@ -719,7 +719,7 @@ $defs:
         oneOf:
           - $ref: "#/$defs/Entity"
           - $ref: "#/$defs/MappableConcept"
-          - $ref: "#/$defs/IRI"
+          - $ref: "#/$defs/iriReference"
         description: >-
           The specific subject or experimental unit in a Study that data in the StudyResult object is about -
           e.g. a particular variant in a population allele frequency dataset like ExAC or gnomAD.
@@ -959,7 +959,7 @@ $defs:
         type: string
         description: Version of the terminology or code system that provided the code.
       code:
-        $ref: '#/$defs/Code'
+        $ref: '#/$defs/code'
         description: >-
           A symbol uniquely identifying the concept, as in a syntax defined by the code system.
           CURIE format is preferred where possible (e.g. 'SO:0000704' is the CURIE form of the
@@ -1000,6 +1000,14 @@ $defs:
     description: >-
       A concept label that may be mapped to one or more :ref:`Codings <Coding>`.
     properties:
+      conceptType:
+        type: string
+        description: >-
+          A term indicating the type of concept being represented by the MappableConcept.
+        $comment: >-
+          This attribute can be used to indicate the type of concept being represented by the MappableConcept.
+          For example, in a variant pathogenicity assessment, the conceptType could be 'Pathogenicity Strength',
+          'Disease', 'Phenotype', 'Drug', 'Tumor Type', 'Evidence Direction', 'Evidence Strength', etc.
       label:
         type: string
         description: A primary name for the concept.
@@ -1044,7 +1052,7 @@ $defs:
       - name
       - value
 
-  Code:    
+  code:    
     type: string
     maturity: draft
     description: >-
@@ -1054,7 +1062,7 @@ $defs:
     pattern: '\S+( \S+)*'
     example: ENSG00000139618
 
-  IRI:
+  iriReference:
     type: string
     maturity: trial use
     description: >-
@@ -1063,3 +1071,18 @@ $defs:
       <https://datatracker.ietf.org/doc/html/rfc3987#section-2.1>`_. MAY be a JSON Pointer as an IRI fragment, as
       described by `RFC6901 section 6 <https://datatracker.ietf.org/doc/html/rfc6901#section-6>`_.
     format: iri-reference
+
+  date:
+    type: string
+    maturity: draft
+    description: >-
+      A string is valid against this format if it represents a date in the following format: YYYY-MM-DD.
+    format: date
+
+  datetime:
+    type: string
+    maturity: draft
+    description: >-
+      A string is valid against this format if it represents a date-time in the following format:
+      YYYY:MM::DDThh:mm:ss.sTZD.
+    format: date-time
