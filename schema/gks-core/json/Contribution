@@ -80,5 +80,6 @@
    },
    "required": [
       "type"
-   ]
+   ],
+   "additionalProperties": false
 }

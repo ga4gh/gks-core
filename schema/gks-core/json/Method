@@ -130,5 +130,6 @@
    },
    "required": [
       "type"
-   ]
+   ],
+   "additionalProperties": false
 }

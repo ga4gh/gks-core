@@ -38,5 +38,6 @@
    "required": [
       "coding",
       "relation"
-   ]
+   ],
+   "additionalProperties": false
 }
