@@ -33,8 +33,7 @@
          "description": "Another data record from which the record described here was derived, through a data ingest and/or transformation process. Value should be a string representing the identifier of the source record."
       },
       "dateRecordCreated": {
-         "type": "string",
-         "format": "datetime",
+         "$ref": "/ga4gh/schema/gks-core/1.x/json/datetime",
          "description": "The date the record was initially created."
       },
       "contributions": {

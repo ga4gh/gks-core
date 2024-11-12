@@ -75,7 +75,7 @@ Some DataSet attributes are inherited from :ref:`InformationEntity`.
       - A document in which the the Information Entity is reported.
    *  - dateAuthored
       - 
-      - string
+      - :ref:`datetime`
       - 0..1
       - Indicates when the information content expressed in the Information Entity was generated.
    *  - derivedFrom
@@ -103,7 +103,7 @@ Some DataSet attributes are inherited from :ref:`InformationEntity`.
       - A specific type of data set the DataSet instance represents (e.g. a 'clinical data set', a 'sequencing data set', a 'gene expression data set', a 'genome annotation data set')
    *  - releaseDate
       - 
-      - string
+      - :ref:`datetime`
       - 0..1
       - Indicates when a version of a Data Set was formally released.
    *  - version

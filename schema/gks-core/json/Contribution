@@ -42,8 +42,7 @@
          "$comment": "This attribute can be used to report a specific type for the Activity, in cases where a model does not define Activity subclasses for this purpose. Implementers can define their own set of data set type codes/terms, to match the needs of the domain or application."
       },
       "date": {
-         "type": "string",
-         "format": "date",
+         "$refs": "#/$defs/date",
          "description": "The date that the Activity was completed.",
          "$comment": "By convention, populate this attribute with the date the activity was completed (e.g. in cases where the activity spans multiple days). The date SHOULD be formatted as a date string in ISO format \"YYYY-MM-DD\"."
       },

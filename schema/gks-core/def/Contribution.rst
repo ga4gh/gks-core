@@ -59,7 +59,7 @@ Some Contribution attributes are inherited from :ref:`Activity`.
       - A specific type of activity the Activity instance represents.
    *  - date
       - 
-      - string
+      - _Not Specified_
       - 0..1
       - The date that the Activity was completed.
    *  - specifiedBy

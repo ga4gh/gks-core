@@ -75,7 +75,7 @@ Some Document attributes are inherited from :ref:`InformationEntity`.
       - A document in which the the Information Entity is reported.
    *  - dateAuthored
       - 
-      - string
+      - :ref:`datetime`
       - 0..1
       - Indicates when the information content expressed in the Information Entity was generated.
    *  - derivedFrom
