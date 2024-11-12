@@ -51,7 +51,7 @@ Some RecordMetadata attributes are inherited from :ref:`Element`.
       - Another data record from which the record described here was derived, through a data ingest and/or transformation process. Value should be a string representing the identifier of the source record.
    *  - dateRecordCreated
       - 
-      - string
+      - :ref:`datetime`
       - 0..1
       - The date the record was initially created.
    *  - contributions

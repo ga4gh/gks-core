@@ -64,7 +64,7 @@ Some Activity attributes are inherited from :ref:`Entity`.
       - A specific type of activity the Activity instance represents.
    *  - date
       - 
-      - string
+      - _Not Specified_
       - 0..1
       - The date that the Activity was completed.
    *  - performedBy
