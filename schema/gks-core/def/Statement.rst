@@ -96,21 +96,11 @@ Some Statement attributes are inherited from :ref:`InformationEntity`.
       - :ref:`RecordMetadata`
       - 0..1
       - Provenance metadata about a specific concrete record of information as encoded/serialized in a particular data set or object (as opposed to provenance about the abstract information content the encoding carries).
-   *  - subject
+   *  - proposition
       - 
-      - object
-      - 1..1
-      - The Entity about which the Statement is made.
-   *  - predicate
-      - 
-      - string
-      - 1..1
-      - The relationship declared to hold between the subject and the object of the Statement.
-   *  - object
-      - 
-      - object
-      - 1..1
-      - An Entity or concept that is related to the subject of a Statement via its predicate.
+      - :ref:`Proposition`
+      - 0..1
+      - A possible fact that the Statement assesses or puts forth as true.
    *  - direction
       - 
       - string
