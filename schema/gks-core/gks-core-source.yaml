@@ -403,11 +403,6 @@ $defs:
       and evidence types that under more fine-grained interpretation approaches might be split apart and assessed as
       separate lines of evidence.
     heritableProperties:
-      type:
-        extends: type
-        const: EvidenceLine
-        default: EvidenceLine
-        description: Must be "EvidenceLine"
       targetProposition:
         $ref: "#/$defs/Proposition"
         description: >-
