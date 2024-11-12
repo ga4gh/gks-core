@@ -71,11 +71,6 @@ $defs:
       many distinct physical artifacts (e.g. all physical copies of the first edition of "War and Peace"
       carry the same information content, and thus concretize the same Information Entity).
     heritableProperties:
-      type:
-        type: string
-        const: InformationEntity
-        default: InformationEntity
-        description: MUST be "InformationEntity".
       specifiedBy:
         oneOf:
         - $ref: "#/$defs/Method"
@@ -279,11 +274,6 @@ $defs:
       or describe the overall level of confidence/evidence for or against them; (2) by Evidence Lines that
       report the direction and strength of an evidence-based argument for the Proposition.
     heritableProperties:
-      type:
-        extends: type
-        const: Proposition
-        default: Proposition
-        description: Must be "Proposition"
       propositionText:
         type: string
         description: >-
@@ -527,6 +517,11 @@ $defs:
       false").  This mode is used in curation projects to track the evolving state of support for propositions of interest, as
       curators continue to collect evidence and work toward a conclusive assertion.
     properties:
+      type:
+        extends: type
+        const: Statement
+        default: Statement
+        description: MUST be "Statement".
       proposition:
         $ref: "#/$defs/Proposition"
         description:  >-
@@ -661,6 +656,11 @@ $defs:
       and evidence types that under more fine-grained interpretation approaches might be split apart and assessed as
       separate lines of evidence.
     properties:
+      type:
+        extends: type
+        const: EvidenceLine
+        default: EvidenceLine
+        description: MUST be "StateEvidenceLinement".    
       targetProposition:
         $ref: "#/$defs/Proposition"
         description: >-

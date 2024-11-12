@@ -112,9 +112,10 @@
       },
       "type": {
          "type": "string",
+         "description": "MUST be \"DataSet\".",
+         "$comment": "MUST be the label of a concrete class from the data model.",
          "const": "DataSet",
-         "default": "DataSet",
-         "description": "MUST be \"DataSet\"."
+         "default": "DataSet"
       },
       "subtype": {
          "$ref": "/ga4gh/schema/gks-core/1.x/json/MappableConcept",

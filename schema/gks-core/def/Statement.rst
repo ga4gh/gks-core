@@ -26,11 +26,6 @@ Some Statement attributes are inherited from :ref:`InformationEntity`.
       - string
       - 0..1
       - The 'logical' identifier of the Entity in the system of record, e.g. a UUID.  This 'id' is unique within a given system, but may or may not be globally unique outside the system. It is used within a system to reference an object from another.
-   *  - type
-      - 
-      - string
-      - 1..1
-      - MUST be "InformationEntity".
    *  - label
       - 
       - string
@@ -96,6 +91,11 @@ Some Statement attributes are inherited from :ref:`InformationEntity`.
       - :ref:`RecordMetadata`
       - 0..1
       - Provenance metadata about a specific concrete record of information as encoded/serialized in a particular data set or object (as opposed to provenance about the abstract information content the encoding carries).
+   *  - type
+      - 
+      - string
+      - 1..1
+      - MUST be "Statement".
    *  - proposition
       - 
       - :ref:`Proposition`

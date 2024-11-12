@@ -112,9 +112,10 @@
       },
       "type": {
          "type": "string",
+         "description": "MUST be \"Method\".",
+         "$comment": "MUST be the label of a concrete class from the data model.",
          "const": "Method",
-         "default": "Method",
-         "description": "MUST be \"Method\"."
+         "default": "Method"
       },
       "subtype": {
          "$ref": "/ga4gh/schema/gks-core/1.x/json/MappableConcept",

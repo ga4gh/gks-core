@@ -30,7 +30,7 @@ Some InformationEntity attributes are inherited from :ref:`Entity`.
       - 
       - string
       - 1..1
-      - MUST be "InformationEntity".
+      - The name of the class that is instantiated by a data object representing the Entity.
    *  - label
       - 
       - string
