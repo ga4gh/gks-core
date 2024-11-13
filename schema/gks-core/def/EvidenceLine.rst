@@ -95,7 +95,7 @@ Some EvidenceLine attributes are inherited from :ref:`InformationEntity`.
       - 
       - string
       - 1..1
-      - MUST be "StateEvidenceLinement".
+      - MUST be "EvidenceLine".
    *  - targetProposition
       - 
       - :ref:`Proposition`

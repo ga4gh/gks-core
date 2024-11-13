@@ -163,7 +163,6 @@
       }
    },
    "required": [
-      "proposition",
       "type"
    ],
    "additionalProperties": false

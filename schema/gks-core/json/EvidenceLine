@@ -112,7 +112,7 @@
       },
       "type": {
          "type": "string",
-         "description": "MUST be \"StateEvidenceLinement\".",
+         "description": "MUST be \"EvidenceLine\".",
          "$comment": "MUST be the label of a concrete class from the data model.",
          "const": "EvidenceLine",
          "default": "EvidenceLine"
