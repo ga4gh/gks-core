@@ -17,10 +17,9 @@ Fork the repo at <https://github.com/ga4gh/gks-core>.
 
 ## Contributing to the schema
 
-GKS Core uses the following source documents for JSON Schema:
+GKS Core uses the following source document for JSON Schema:
 
-* [core-im/core-im-source.yaml](./schema/gks-core/core-im/core-im-source.yaml)
-* [domain-entities-source.yaml](./schema/gks-core/domain-entities/domain-entities-source.yaml)
+* [gks-core-source.yaml](./schema/gks-core/gks-core-source.yaml)
 
 To create the corresponding def and json files after making changes to any of of the
 source documents, from the root directory:
