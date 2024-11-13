@@ -99,7 +99,7 @@ Some Statement attributes are inherited from :ref:`InformationEntity`.
    *  - proposition
       - 
       - :ref:`Proposition`
-      - 1..1
+      - 0..1
       - A possible fact that the Statement assesses or puts forth as true.
    *  - direction
       - 

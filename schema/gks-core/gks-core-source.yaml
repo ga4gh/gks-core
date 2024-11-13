@@ -625,8 +625,6 @@ $defs:
           Evidence Lines are useful in cases where a data provider wants to describe in detail how information
           was assessed as evidence to generate and score different arguments for or against a Statement's
           proposition. Evidence Lines can be omitted if such information is not available or needed.
-    required:
-      - proposition
 
   EvidenceLine:
     type: object
@@ -660,7 +658,7 @@ $defs:
         extends: type
         const: EvidenceLine
         default: EvidenceLine
-        description: MUST be "StateEvidenceLinement".    
+        description: MUST be "EvidenceLine".    
       targetProposition:
         $ref: "#/$defs/Proposition"
         description: >-
