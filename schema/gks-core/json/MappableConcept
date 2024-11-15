@@ -28,6 +28,10 @@
          "type": "string",
          "description": "A primary name for the concept."
       },
+      "primaryCode": {
+         "$ref": "/ga4gh/schema/gks-core/1.x/json/code",
+         "description": "A primary code for the concept that is used to identify the concept in a terminology or code system. If there is a public code system for the primaryCode then it should also be specified in the mappings array with a relation of 'exactMatch'. This attribute is provided to both allow a more technical code to be used when a public Coding with a system is not available as well as when it is available but should be identified as the primary code."
+      },
       "mappings": {
          "type": "array",
          "ordered": false,
