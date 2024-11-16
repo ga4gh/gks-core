@@ -1,5 +1,6 @@
 id: HGNC:1101
 primaryCode: BRCA2
+label: BRCA2 DNA repair associated
 conceptType: Gene
 mappings:
 - coding: 
