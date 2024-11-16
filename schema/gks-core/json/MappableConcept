@@ -41,8 +41,18 @@
          "description": "A list of mappings to concepts in terminologies or code systems. Each mapping should include a coding and a relation."
       }
    },
-   "required": [
-      "label"
+   "oneOf": [
+      {
+         "required": [
+            "label"
+         ]
+      },
+      {
+         "required": [
+            "primaryCode"
+         ]
+      }
    ],
+   "required": [],
    "additionalProperties": false
 }

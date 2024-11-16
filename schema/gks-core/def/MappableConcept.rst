@@ -42,7 +42,7 @@ Some MappableConcept attributes are inherited from :ref:`Element`.
    *  - label
       - 
       - string
-      - 1..1
+      - 0..1
       - A primary name for the concept.
    *  - primaryCode
       - 
