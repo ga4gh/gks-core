@@ -40,6 +40,14 @@ Anything that exists, has existed, or will exist.
       - string
       - 0..1
       - A free-text description of the Entity.
+   *  - alternativeLabels
+      - 
+                        .. raw:: html
+
+                            <span style="background-color: #B2DFEE; color: black; padding: 2px 6px; border: 1px solid black; border-radius: 3px; font-weight: bold; display: inline-block; margin-bottom: 5px;" title="Unordered">&#8942;</span>
+      - string
+      - 0..m
+      - Alternative name(s) for the Entity.
    *  - extensions
       - 
                         .. raw:: html
