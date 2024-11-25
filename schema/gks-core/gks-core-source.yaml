@@ -156,7 +156,7 @@ $defs:
   ConceptMapping:
     type: object
     inherits: Element
-    maturity: draft
+    maturity: trial use
     description: >-
       A mapping to a concept in a terminology or code system.
     properties:
@@ -181,7 +181,7 @@ $defs:
   Coding:
     inherits: Element
     type: object
-    maturity: draft
+    maturity: trial use
     description: >-
       A structured representation of a code for a defined concept in a terminology or code system.
     properties:
