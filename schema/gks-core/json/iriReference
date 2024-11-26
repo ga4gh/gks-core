@@ -1,6 +1,6 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/gks-core/1.x/json/iriReference",
+   "$id": "https://w3id.org/ga4gh/schema/gks-core/1.0.0-snapshot.2024-11.1/json/iriReference",
    "title": "iriReference",
    "type": "string",
    "maturity": "trial use",
