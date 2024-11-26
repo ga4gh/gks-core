@@ -4,6 +4,11 @@
    "title": "MappableConcept",
    "type": "object",
    "maturity": "trial use",
+   "ga4gh": {
+      "inherent": [
+         "primaryCode"
+      ]
+   },
    "description": "A concept label that may be mapped to one or more Codings.",
    "properties": {
       "id": {
