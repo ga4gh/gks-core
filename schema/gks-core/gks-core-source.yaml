@@ -188,6 +188,12 @@ $defs:
     description: >-
       A structured representation of a code for a defined concept in a terminology or code system.
     properties:
+      code:
+        $ref: '#/$defs/code'
+        description: >-
+          A symbol uniquely identifying the concept, as in a syntax defined by the code system.
+          CURIE format is preferred where possible (e.g. 'SO:0000704' is the CURIE form of the
+          Sequence Ontology code for 'gene'). See https://www.w3.org/TR/curie/.
       label:
         type: string
         description: The human-readable name for the coded concept, as defined by the code system.
@@ -195,19 +201,27 @@ $defs:
         type: string
         description: >-
           The terminology/code system that defined the code. May be reported as a free-text name
-          (e.g. 'Sequence Ontology'), but it is preferable to provide a uri/url for the system.
-          When the 'code' is reported as a CURIE, the 'system' should be reported as the uri that
-          the CURIE's prefix expands to (e.g. 'http://purl.obofoundry.org/so.owl/' for the
-          Sequence Ontology).
+          (e.g. 'Sequence Ontology'), but it is preferrable to provide an IRI or URL that resolves to 
+          a specification of the system, or its home page. e.g. for the Sequence Ontology, 
+          'http://purl.obolibrary.org/so.owl' resolves to an owl rendering of the ontology, and
+          'http://www.sequenceontology.org/' resolves to its home page.
       systemVersion:
         type: string
         description: Version of the terminology or code system that provided the code.
-      code:
-        $ref: '#/$defs/code'
+      systemPrefix: 
+        type: string
         description: >-
-          A symbol uniquely identifying the concept, as in a syntax defined by the code system.
-          CURIE format is preferred where possible (e.g. 'SO:0000704' is the CURIE form of the
-          Sequence Ontology code for 'gene').
+          An abbreviation that is used as a prefix in the CURIE form of codes from the system.  
+          e.g. 'SO' as the prefix for the Sequence Ontology, as used in CURIEs such as 'SO:0000704'.
+      systemPrefixExpansion: 
+        type: string
+        description: >-
+          An string declaring what the system prefix expands to, for the purpose of translating a CURIE 
+          into the full IRI form of the code. The concatenation of the prefix expansion and the code
+          portion of a CURIE (i.e the characters after the ':') should give a resolvable URL for the code. 
+          e.g. 'SO' expands to 'http://purl.obolibrary.org/obo/SO_', such that the CURIE 'SO:0000704' 
+          translates to the full URL 'http://purl.obolibrary.org/obo/SO_0000704', which resolves to a 
+          web page describing the SO 'gene' entity.
     required:
       - system
       - code
