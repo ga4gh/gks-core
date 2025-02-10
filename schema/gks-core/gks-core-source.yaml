@@ -10,7 +10,7 @@ $defs:
     description: Anything that exists, has existed, or will exist.
     $comment: >-
       Entity is the root class of the 'gks-core' information model. All core classes that
-      have ids and other general metadata like label, description, type, or extensions descend from
+      have ids and other general metadata like name, description, type, or extensions descend from
       this class and inherit its attributes.
     heritableProperties:
       id:
@@ -30,14 +30,14 @@ $defs:
         type: string
         description: >-
           The name of the class that is instantiated by a data object representing the Entity.
-        $comment: MUST be the label of a concrete class from the data model.
-      label:
+        $comment: MUST be the name of a concrete class from the data model.
+      name:
         type: string
         description: A primary name for the entity.
       description:
         type: string
         description: A free-text description of the Entity.
-      alternativeLabels:
+      aliases:
         type: array
         ordered: false
         items:
@@ -121,7 +121,7 @@ $defs:
       inherent:
         - primaryCode
     description: >-
-      A concept label that may be mapped to one or more :ref:`Codings <Coding>`.
+      A concept name that may be mapped to one or more :ref:`Codings <Coding>`.
     properties:
       conceptType:
         type: string
@@ -131,7 +131,7 @@ $defs:
           This attribute can be used to indicate the type of concept being represented by the MappableConcept.
           For example, in a variant pathogenicity assessment, the conceptType could be 'Pathogenicity Strength',
           'Disease', 'Phenotype', 'Drug', 'Tumor Type', 'Evidence Direction', 'Evidence Strength', etc.
-      label:
+      name:
         type: string
         description: A primary name for the concept.
       primaryCode:
@@ -152,7 +152,7 @@ $defs:
           include a coding and a relation.
     anyOf:
       - required:
-          - label
+          - name
       - required:
           - primaryCode
 
@@ -188,7 +188,7 @@ $defs:
     description: >-
       A structured representation of a code for a defined concept in a terminology or code system.
     properties:
-      label:
+      name:
         type: string
         description: The human-readable name for the coded concept, as defined by the code system.
       system:

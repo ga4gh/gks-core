@@ -1,4 +1,4 @@
-label: foo
+name: foo
 system: https://bar.com
 systemVersion: "2"
 code: "SCV213.1"
