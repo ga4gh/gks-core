@@ -6,6 +6,21 @@
 
 A concept name that may be mapped to one or more :ref:`Codings <Coding>`.
 
+**GA4GH Digest**
+
+.. list-table::
+    :class: clean-wrap
+    :header-rows: 1
+    :align: left
+    :widths: auto
+
+    *  - Prefix
+       - Inherent
+
+    *  - None
+       - ['primaryCode']
+
+
 **Information Model**
 
 Some MappableConcept attributes are inherited from :ref:`Element`.
