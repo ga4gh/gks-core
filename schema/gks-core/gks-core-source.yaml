@@ -116,7 +116,7 @@ $defs:
   MappableConcept:
     inherits: Element
     type: object
-    maturity: trial use
+    maturity: draft
     ga4gh:
       inherent:
         - primaryCode
@@ -159,7 +159,7 @@ $defs:
   ConceptMapping:
     type: object
     inherits: Element
-    maturity: trial use
+    maturity: draft
     description: >-
       A mapping to a concept in a terminology or code system.
     properties:
@@ -184,7 +184,7 @@ $defs:
   Coding:
     inherits: Element
     type: object
-    maturity: trial use
+    maturity: draft
     description: >-
       A structured representation of a code for a defined concept in a terminology or code system.
     properties:
