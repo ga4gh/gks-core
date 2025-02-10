@@ -3,13 +3,13 @@
    "$id": "https://w3id.org/ga4gh/schema/gks-core/1.x/json/MappableConcept",
    "title": "MappableConcept",
    "type": "object",
-   "maturity": "trial use",
+   "maturity": "draft",
    "ga4gh": {
       "inherent": [
          "primaryCode"
       ]
    },
-   "description": "A concept label that may be mapped to one or more Codings.",
+   "description": "A concept name that may be mapped to one or more Codings.",
    "properties": {
       "id": {
          "type": "string",
@@ -29,7 +29,7 @@
          "description": "A term indicating the type of concept being represented by the MappableConcept.",
          "$comment": "This attribute can be used to indicate the type of concept being represented by the MappableConcept. For example, in a variant pathogenicity assessment, the conceptType could be 'Pathogenicity Strength', 'Disease', 'Phenotype', 'Drug', 'Tumor Type', 'Evidence Direction', 'Evidence Strength', etc."
       },
-      "label": {
+      "name": {
          "type": "string",
          "description": "A primary name for the concept."
       },
@@ -49,7 +49,7 @@
    "anyOf": [
       {
          "required": [
-            "label"
+            "name"
          ]
       },
       {

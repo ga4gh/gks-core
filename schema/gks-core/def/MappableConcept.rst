@@ -1,10 +1,10 @@
-.. note:: This data class is at a **trial use** maturity level and may \
-    change in future releases. Maturity \
+.. warning:: This data class is at a **draft** maturity level and may \
+    change significantly in future releases. Maturity \
     levels are described in the :ref:`maturity-model`.
 
 **Computational Definition**
 
-A concept label that may be mapped to one or more :ref:`Codings <Coding>`.
+A concept name that may be mapped to one or more :ref:`Codings <Coding>`.
 
 **Information Model**
 
@@ -39,7 +39,7 @@ Some MappableConcept attributes are inherited from :ref:`Element`.
       - string
       - 0..1
       - A term indicating the type of concept being represented by the MappableConcept.
-   *  - label
+   *  - name
       - 
       - string
       - 0..1
