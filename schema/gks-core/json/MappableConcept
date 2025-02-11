@@ -3,7 +3,7 @@
    "$id": "https://w3id.org/ga4gh/schema/gks-core/1.x/json/MappableConcept",
    "title": "MappableConcept",
    "type": "object",
-   "maturity": "draft",
+   "maturity": "trial use",
    "ga4gh": {
       "inherent": [
          "primaryCode"

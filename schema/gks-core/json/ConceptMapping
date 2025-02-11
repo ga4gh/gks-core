@@ -3,7 +3,7 @@
    "$id": "https://w3id.org/ga4gh/schema/gks-core/1.x/json/ConceptMapping",
    "title": "ConceptMapping",
    "type": "object",
-   "maturity": "draft",
+   "maturity": "trial use",
    "description": "A mapping to a concept in a terminology or code system.",
    "properties": {
       "id": {
