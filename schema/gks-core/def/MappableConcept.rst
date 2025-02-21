@@ -4,22 +4,7 @@
 
 **Computational Definition**
 
-A concept name that may be mapped to one or more :ref:`Codings <Coding>`.
-
-**GA4GH Digest**
-
-.. list-table::
-    :class: clean-wrap
-    :header-rows: 1
-    :align: left
-    :widths: auto
-
-    *  - Prefix
-       - Inherent
-
-    *  - None
-       - ['primaryCode']
-
+A concept based on a primaryCoding and/or name that may be mapped to one or more other :ref:`Codings <Coding>`.
 
 **Information Model**
 
@@ -59,11 +44,11 @@ Some MappableConcept attributes are inherited from :ref:`Element`.
       - string
       - 0..1
       - A primary name for the concept.
-   *  - primaryCode
+   *  - primaryCoding
       - 
-      - :ref:`code`
+      - :ref:`Coding`
       - 0..1
-      - A primary code for the concept that is used to identify the concept in a terminology or code system. If there is a public code system for the primaryCode then it should also be specified in the mappings array with a relation of 'exactMatch'. This attribute is provided to both allow a more technical code to be used when a public Coding with a system is not available as well as when it is available but should be identified as the primary code.
+      - A primary coding for the concept.
    *  - mappings
       - 
                         .. raw:: html
