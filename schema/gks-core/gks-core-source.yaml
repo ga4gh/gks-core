@@ -209,7 +209,7 @@ $defs:
       - code
 
   # primitive data types section for convenience and consistency -- code, iriReference, date, datetime
-  code:    
+  code:
     type: string
     maturity: trial use
     description: >-

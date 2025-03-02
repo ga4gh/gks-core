@@ -2,12 +2,12 @@ conceptType: Gene
 name: BRCA2
 primaryCoding:
   code: HGNC:1101
-  system: https://www.genenames.org/    
+  system: https://www.genenames.org/
   iris:
   - https://identifiers.org/hgnc:1101
-  - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/1101   
+  - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/1101
 mappings:
-- coding: 
+- coding:
     code: ENSG00000139618
     system: https://www.ensembl.org/
     iris:
@@ -15,7 +15,7 @@ mappings:
       - https://www.ensembl.org/id/ENSG00000139618
 
   relation: closeMatch
-- coding: 
+- coding:
     code: "675"
     system: https://www.ncbi.nlm.nih.gov/gene/
     iris:

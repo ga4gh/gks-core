@@ -6,7 +6,7 @@ from jsonschema import Draft202012Validator
 import re
 
 root_path = Path(__file__).parent.parent
-schema_path = root_path / "schema" 
+schema_path = root_path / "schema"
 test_path = root_path / "tests"
 examples_path = root_path / "examples"
 gks_core_source = schema_path / "gks-core" / "gks-core-source.yaml"
