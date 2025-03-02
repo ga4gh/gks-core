@@ -1,5 +1,5 @@
 $schema: "https://json-schema.org/draft/2020-12/schema"
-$id: "https://w3id.org/ga4gh/schema/gks-core/1.0.0-snapshot.2025-02.2/gks-core-source.yaml"
+$id: "https://w3id.org/ga4gh/schema/gks-core/1.0.0-snapshot.2025-02.3/gks-core-source.yaml"
 title: GKS Core Class Definitions
 strict: true
 
@@ -117,11 +117,8 @@ $defs:
     inherits: Element
     type: object
     maturity: trial use
-    ga4gh:
-      inherent:
-        - primaryCode
     description: >-
-      A concept name that may be mapped to one or more :ref:`Codings <Coding>`.
+      A concept based on a primaryCoding and/or name that may be mapped to one or more other :ref:`Codings <Coding>`.
     properties:
       conceptType:
         type: string
@@ -134,14 +131,9 @@ $defs:
       name:
         type: string
         description: A primary name for the concept.
-      primaryCode:
-        $ref: "#/$defs/code"
-        description: >-
-          A primary code for the concept that is used to identify the concept in a terminology or code system.
-          If there is a public code system for the primaryCode then it should also be specified in the mappings
-          array with a relation of 'exactMatch'. This attribute is provided to both allow a more technical code
-          to be used when a public Coding with a system is not available as well as when it is available but
-          should be identified as the primary code.
+      primaryCoding:
+        $ref: "#/$defs/Coding"
+        description: A primary coding for the concept.
       mappings:
         type: array
         ordered: false
@@ -154,7 +146,7 @@ $defs:
       - required:
           - name
       - required:
-          - primaryCode
+          - primaryCoding
 
   ConceptMapping:
     type: object
@@ -196,9 +188,6 @@ $defs:
         description: >-
           The terminology/code system that defined the code. May be reported as a free-text name
           (e.g. 'Sequence Ontology'), but it is preferable to provide a uri/url for the system.
-          When the 'code' is reported as a CURIE, the 'system' should be reported as the uri that
-          the CURIE's prefix expands to (e.g. 'http://purl.obofoundry.org/so.owl/' for the
-          Sequence Ontology).
       systemVersion:
         type: string
         description: Version of the terminology or code system that provided the code.
@@ -206,8 +195,15 @@ $defs:
         $ref: '#/$defs/code'
         description: >-
           A symbol uniquely identifying the concept, as in a syntax defined by the code system.
-          CURIE format is preferred where possible (e.g. 'SO:0000704' is the CURIE form of the
-          Sequence Ontology code for 'gene').
+          If a dereferencable identifier is available, it should be provided in the `iris` field.
+      iris:
+        type: array
+        ordered: false
+        items:
+          $ref: '#/$defs/iriReference'
+        description: >-
+          A list of IRIs that are associated with the coding. This can be used to provide additional
+          context or to link to additional information about the concept.
     required:
       - system
       - code

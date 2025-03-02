@@ -43,7 +43,7 @@ Some Coding attributes are inherited from :ref:`Element`.
       - 
       - string
       - 1..1
-      - The terminology/code system that defined the code. May be reported as a free-text name (e.g. 'Sequence Ontology'), but it is preferable to provide a uri/url for the system. When the 'code' is reported as a CURIE, the 'system' should be reported as the uri that the CURIE's prefix expands to (e.g. 'http://purl.obofoundry.org/so.owl/' for the Sequence Ontology).
+      - The terminology/code system that defined the code. May be reported as a free-text name (e.g. 'Sequence Ontology'), but it is preferable to provide a uri/url for the system.
    *  - systemVersion
       - 
       - string
@@ -53,4 +53,12 @@ Some Coding attributes are inherited from :ref:`Element`.
       - 
       - :ref:`code`
       - 1..1
-      - A symbol uniquely identifying the concept, as in a syntax defined by the code system. CURIE format is preferred where possible (e.g. 'SO:0000704' is the CURIE form of the Sequence Ontology code for 'gene').
+      - A symbol uniquely identifying the concept, as in a syntax defined by the code system. If a dereferencable identifier is available, it should be provided in the `iris` field.
+   *  - iris
+      - 
+                        .. raw:: html
+
+                            <span style="background-color: #B2DFEE; color: black; padding: 2px 6px; border: 1px solid black; border-radius: 3px; font-weight: bold; display: inline-block; margin-bottom: 5px;" title="Unordered">&#8942;</span>
+      - :ref:`iriReference`
+      - 0..m
+      - A list of IRIs that are associated with the coding. This can be used to provide additional context or to link to additional information about the concept.

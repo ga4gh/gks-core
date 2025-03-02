@@ -1,15 +1,10 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/gks-core/1.0.0-snapshot.2025-02.2/json/MappableConcept",
+   "$id": "https://w3id.org/ga4gh/schema/gks-core/1.0.0-snapshot.2025-02.3/json/MappableConcept",
    "title": "MappableConcept",
    "type": "object",
    "maturity": "trial use",
-   "ga4gh": {
-      "inherent": [
-         "primaryCode"
-      ]
-   },
-   "description": "A concept name that may be mapped to one or more Codings.",
+   "description": "A concept based on a primaryCoding and/or name that may be mapped to one or more other Codings.",
    "properties": {
       "id": {
          "type": "string",
@@ -19,7 +14,7 @@
          "type": "array",
          "ordered": false,
          "items": {
-            "$ref": "/ga4gh/schema/gks-core/1.0.0-snapshot.2025-02.2/json/Extension"
+            "$ref": "/ga4gh/schema/gks-core/1.0.0-snapshot.2025-02.3/json/Extension"
          },
          "description": "A list of extensions to the Entity, that allow for capture of information not directly supported by elements defined in the model.",
          "$comment": "Extension objects have a key-value data structure that allows definition of custom fields in the data itself. Extensions are not expected to be natively understood, but may be used for pre-negotiated exchange of message attributes between systems."
@@ -33,15 +28,15 @@
          "type": "string",
          "description": "A primary name for the concept."
       },
-      "primaryCode": {
-         "$ref": "/ga4gh/schema/gks-core/1.0.0-snapshot.2025-02.2/json/code",
-         "description": "A primary code for the concept that is used to identify the concept in a terminology or code system. If there is a public code system for the primaryCode then it should also be specified in the mappings array with a relation of 'exactMatch'. This attribute is provided to both allow a more technical code to be used when a public Coding with a system is not available as well as when it is available but should be identified as the primary code."
+      "primaryCoding": {
+         "$ref": "/ga4gh/schema/gks-core/1.0.0-snapshot.2025-02.3/json/Coding",
+         "description": "A primary coding for the concept."
       },
       "mappings": {
          "type": "array",
          "ordered": false,
          "items": {
-            "$ref": "/ga4gh/schema/gks-core/1.0.0-snapshot.2025-02.2/json/ConceptMapping"
+            "$ref": "/ga4gh/schema/gks-core/1.0.0-snapshot.2025-02.3/json/ConceptMapping"
          },
          "description": "A list of mappings to concepts in terminologies or code systems. Each mapping should include a coding and a relation."
       }
@@ -54,7 +49,7 @@
       },
       {
          "required": [
-            "primaryCode"
+            "primaryCoding"
          ]
       }
    ],

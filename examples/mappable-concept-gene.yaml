@@ -1,20 +1,29 @@
-id: HGNC:1101
-primaryCode: BRCA2
-name: BRCA2 DNA repair associated
 conceptType: Gene
+name: BRCA2
+primaryCoding:
+  code: HGNC:1101
+  system: https://www.genenames.org/    
+  iris:
+  - https://identifiers.org/hgnc:1101
+  - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/1101   
 mappings:
 - coding: 
-    code: HGNC:1101
-    system: https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/
-  relation: exactMatch
-- coding: 
     code: ENSG00000139618
-    system: https://www.ensembl.org/id/
+    system: https://www.ensembl.org/
+    iris:
+      - https://identifiers.org/ensembl:ENSG00000139618
+      - https://www.ensembl.org/id/ENSG00000139618
+
   relation: closeMatch
 - coding: 
     code: "675"
     system: https://www.ncbi.nlm.nih.gov/gene/
+    iris:
+      - https://identifiers.org/ncbigene:675
+      - https://www.ncbi.nlm.nih.gov/gene/675
   relation: closeMatch
 extensions:
 - name: "AlsoKnownAs"
   value: "FAD; FACD; FAD1; GLM3; BRCC2; FANCD; PNCA2; FANCD1; XRCC11; BROVCA2"
+- name: "description"
+  value: "BRCA2 DNA repair associated"
