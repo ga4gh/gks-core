@@ -22,12 +22,12 @@ Some Extension attributes are inherited from :ref:`Element`.
       - Limits
       - Description
    *  - id
-      - 
+      -
       - string
       - 0..1
       - The 'logical' identifier of the data element in the system of record, e.g. a UUID.  This 'id' is unique within a given system, but may or may not be globally unique outside the system. It is used within a system to reference an object from another.
    *  - extensions
-      - 
+      -
                         .. raw:: html
 
                             <span style="background-color: #B2DFEE; color: black; padding: 2px 6px; border: 1px solid black; border-radius: 3px; font-weight: bold; display: inline-block; margin-bottom: 5px;" title="Unordered">&#8942;</span>
@@ -35,17 +35,17 @@ Some Extension attributes are inherited from :ref:`Element`.
       - 0..m
       - A list of extensions to the Entity, that allow for capture of information not directly supported by elements defined in the model.
    *  - name
-      - 
+      -
       - string
       - 1..1
       - A name for the Extension. Should be indicative of its meaning and/or the type of information it value represents.
    *  - value
-      - 
+      -
       - ['number', 'string', 'boolean', 'object', 'array', 'null']
       - 1..1
       - The value of the Extension - can be any primitive or structured object
    *  - description
-      - 
+      -
       - string
       - 0..1
       - A description of the meaning or utility of the Extension, to explain the type of information it is meant to hold.

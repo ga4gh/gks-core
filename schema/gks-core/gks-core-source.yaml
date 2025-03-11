@@ -1,5 +1,5 @@
 $schema: "https://json-schema.org/draft/2020-12/schema"
-$id: "https://w3id.org/ga4gh/schema/gks-core/1.0.0-snapshot.2025-02.3/gks-core-source.yaml"
+$id: "https://w3id.org/ga4gh/schema/gks-core/1.0.0-snapshot.2025-02.4/gks-core-source.yaml"
 title: GKS Core Class Definitions
 strict: true
 
@@ -195,7 +195,9 @@ $defs:
         $ref: '#/$defs/code'
         description: >-
           A symbol uniquely identifying the concept, as in a syntax defined by the code system.
-          If a dereferencable identifier is available, it should be provided in the `iris` field.
+          e.g. 'civic.did:30', 'MONDO:005061', and 'C3512' are codes defined by different systems
+          for representing the concept of 'lung adenocarcinoma'.  If a dereferencable identifier
+          is available for the code, it should be provided in the `iris` field.
       iris:
         type: array
         ordered: false
