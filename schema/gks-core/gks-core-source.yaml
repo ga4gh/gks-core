@@ -194,8 +194,10 @@ $defs:
       code:
         $ref: '#/$defs/code'
         description: >-
-          A symbol uniquely identifying the concept, as in a syntax defined by the code system.
-          If a dereferencable identifier is available, it should be provided in the `iris` field.
+          A symbol uniquely identifying the concept, as in a syntax defined by the code system. 
+          e.g. 'civic.did:30', 'MONDO:005061', and 'C3512' are codes defined by different systems
+          for representing the concept of 'lung adenocarcinoma'.  If a dereferencable identifier
+          is available for the code, it should be provided in the `iris` field.
       iris:
         type: array
         ordered: false
