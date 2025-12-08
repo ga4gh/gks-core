@@ -1,5 +1,5 @@
 $schema: "https://json-schema.org/draft/2020-12/schema"
-$id: "https://w3id.org/ga4gh/schema/gks-core/1.0.0/gks-core-source.yaml"
+$id: "https://w3id.org/ga4gh/schema/gks-core/1.1.0/gks-core-source.yaml"
 title: GKS Core Class Definitions
 strict: true
 
@@ -172,6 +172,47 @@ $defs:
     required:
       - relation
       - coding
+
+  # A ConceptSet data structure to provide support for sets of generic concepts.
+  ConceptSet:
+    type: object
+    maturity: trial use
+    inherits: Element
+    description: >-
+      A set of concepts that may be considered as dependent (occurring together), or independent (existing separately)
+      in the context of some knowledge reported about them, as indicated by a set membership operator. e.g. a set of independent
+      molecular consequences that both result from the presence of a particular genetic variant (membership operator = OR).
+    properties:
+      type:
+        type: string
+        const: ConceptSet
+        default: ConceptSet
+        description: MUST be "ConceptSet".
+      concepts:
+        type: array
+        ordered: false
+        items:
+          oneOf:
+            - $ref: "#/$defs/MappableConcept"
+            - $ref: "#/$defs/ConceptSet"
+        description: >-
+          A list of concepts that are dependent (occurring together), or independent (existing separately), depending on the
+          membership operator.
+        minItems: 2
+      membershipOperator:
+        description: >-
+          The logical relationship between concepts in the set, in the context of some knowledge reported about them.
+          The value 'AND' indicates that the concepts are dependent and occur together in this context - i.e. the reported assertion
+          is not necessarily true for each concept on its own - only in combination with the other(s).
+          The value 'OR' indicates that each concept applies independently in this context - i.e. the reported assertion is necessarily
+          true for each concept on its own, independent of the presence of the other(s).
+        type: string
+        enum:
+           - AND
+           - OR
+    required:
+      - concepts
+      - membershipOperator
 
   Coding:
     inherits: Element
