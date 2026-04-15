@@ -13,7 +13,6 @@ mappings:
     iris:
       - https://identifiers.org/ensembl:ENSG00000139618
       - https://www.ensembl.org/id/ENSG00000139618
-
   relation: closeMatch
 - coding:
     code: "675"
