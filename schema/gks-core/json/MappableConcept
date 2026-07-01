@@ -13,8 +13,9 @@
       },
       "type": {
          "type": "string",
-         "description": "The name of the class that is instantiated by a data object representing the Entity.",
-         "$comment": "MUST be the name of a concrete class from the data model."
+         "const": "MappableConcept",
+         "default": "MappableConcept",
+         "description": "MUST be \"MappableConcept\"."
       },
       "name": {
          "type": "string",

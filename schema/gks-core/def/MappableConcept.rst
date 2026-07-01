@@ -30,7 +30,7 @@ Some MappableConcept attributes are inherited from :ref:`Entity`.
       -
       - string
       - 1..1
-      - The name of the class that is instantiated by a data object representing the Entity.
+      - MUST be "MappableConcept".
    *  - name
       -
       - string

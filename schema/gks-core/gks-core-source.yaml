@@ -120,6 +120,11 @@ $defs:
     description: >-
       A concept based on a primaryCoding and/or name that may be mapped to one or more other :ref:`Codings <Coding>`.
     properties:
+      type:
+        type: string
+        const: MappableConcept
+        default: MappableConcept
+        description: MUST be "MappableConcept".
       conceptType:
         type: string
         description: >-
