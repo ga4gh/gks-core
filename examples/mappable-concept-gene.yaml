@@ -22,8 +22,15 @@ mappings:
         - https://identifiers.org/ncbigene:675
         - https://www.ncbi.nlm.nih.gov/gene/675
     relation: closeMatch
-extensions:
-  - name: "AlsoKnownAs"
-    value: "FAD; FACD; FAD1; GLM3; BRCC2; FANCD; PNCA2; FANCD1; XRCC11; BROVCA2"
-  - name: "description"
-    value: "BRCA2 DNA repair associated"
+aliases:
+  - FAD
+  - FACD
+  - FAD1
+  - GLM3
+  - BRCC2
+  - FANCD
+  - PNCA2
+  - FANCD1
+  - XRCC11
+  - BROVCA2
+description: BRCA2 DNA repair associated
