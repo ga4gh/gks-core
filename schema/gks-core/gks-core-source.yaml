@@ -101,7 +101,7 @@ $defs:
           A name for the Extension. Should be indicative of its meaning and/or the type of
           information it value represents.
       value:
-        type: [ "number", "string", "boolean", "object", "array", "null" ]
+        type: ["number", "string", "boolean", "object", "array", "null"]
         description: The value of the Extension - can be any primitive or structured object
         additionalProperties: true
       description:
@@ -114,12 +114,17 @@ $defs:
       - value
 
   MappableConcept:
-    inherits: Element
+    inherits: Entity
     type: object
     maturity: trial use
     description: >-
       A concept based on a primaryCoding and/or name that may be mapped to one or more other :ref:`Codings <Coding>`.
     properties:
+      type:
+        type: string
+        const: MappableConcept
+        default: MappableConcept
+        description: MUST be "MappableConcept".
       conceptType:
         type: string
         description: >-
@@ -156,7 +161,7 @@ $defs:
       A mapping to a concept in a terminology or code system.
     properties:
       coding:
-        $ref: '#/$defs/Coding'
+        $ref: "#/$defs/Coding"
         description: >-
           A structured representation of a code for a defined concept in a terminology or code system.
       relation:
@@ -177,7 +182,7 @@ $defs:
   ConceptSet:
     type: object
     maturity: trial use
-    inherits: Element
+    inherits: Entity
     description: >-
       A set of concepts that may be considered as dependent (occurring together), or independent (existing separately)
       in the context of some knowledge reported about them, as indicated by a set membership operator. e.g. a set of independent
@@ -208,8 +213,8 @@ $defs:
           true for each concept on its own, independent of the presence of the other(s).
         type: string
         enum:
-           - AND
-           - OR
+          - AND
+          - OR
     required:
       - concepts
       - membershipOperator
@@ -233,7 +238,7 @@ $defs:
         type: string
         description: Version of the terminology or code system that provided the code.
       code:
-        $ref: '#/$defs/code'
+        $ref: "#/$defs/code"
         description: >-
           A symbol uniquely identifying the concept, as in a syntax defined by the code system.
           e.g. 'civic.did:30', 'MONDO:005061', and 'C3512' are codes defined by different systems
@@ -243,7 +248,7 @@ $defs:
         type: array
         ordered: false
         items:
-          $ref: '#/$defs/iriReference'
+          $ref: "#/$defs/iriReference"
         description: >-
           A list of IRIs that are associated with the coding. This can be used to provide additional
           context or to link to additional information about the concept.
