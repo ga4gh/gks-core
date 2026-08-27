@@ -1,9 +1,9 @@
 # gkm-core
 
-Core classes and schemas used by all GKS specifications (ie. VR, Cat-VRS, VA, etc..)
+Core classes and schemas used by all GKM specifications (ie. VR, Cat-VRS, VA, etc..)
 
 For more info
-[GKS Repository Organization](https://docs.google.com/document/d/16SrjqPJ1ct_z8OK6kNcu3KO1ia6LAyVriSbuDLXRAI8/edit)
+[GKM Repository Organization](https://docs.google.com/document/d/16SrjqPJ1ct_z8OK6kNcu3KO1ia6LAyVriSbuDLXRAI8/edit)
 
 ## Installing for development
 
@@ -17,7 +17,7 @@ Fork the repo at <https://github.com/ga4gh/gkm-core>.
 
 ## Contributing to the schema
 
-GKS Core uses the following source document for JSON Schema:
+GKM Core uses the following source document for JSON Schema:
 
 * [gkm-core-source.yaml](./schema/gkm-core/gkm-core-source.yaml)
 
