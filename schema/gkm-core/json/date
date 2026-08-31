@@ -1,6 +1,6 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/gks-core/1.1.0/json/date",
+   "$id": "https://w3id.org/ga4gh/schema/gkm-core/1.2.0-ballot.2026-07.1/json/date",
    "title": "date",
    "type": "string",
    "maturity": "trial use",
