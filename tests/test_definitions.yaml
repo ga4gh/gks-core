@@ -1,9 +1,9 @@
 tests:
 - test_file: simple-coding.yaml
   description: simple coding example
-  schema: gks-core
+  schema: gkm-core
   definition: Coding
 - test_file: mappable-concept-gene.yaml
   description: mappable concept gene example
-  schema: gks-core
+  schema: gkm-core
   definition: MappableConcept

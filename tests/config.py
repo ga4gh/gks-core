@@ -9,7 +9,7 @@ root_path = Path(__file__).parent.parent
 schema_path = root_path / "schema"
 test_path = root_path / "tests"
 examples_path = root_path / "examples"
-gks_core_source = schema_path / "gks-core" / "gks-core-source.yaml"
+gkm_core_source = schema_path / "gkm-core" / "gkm-core-source.yaml"
 
 ga4gh_re = re.compile(r'.*\/ga4gh\/schema\/([\w\-\.]+)\/[\w\.]+\/(.*)$')
 

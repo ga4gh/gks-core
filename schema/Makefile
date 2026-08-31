@@ -1,5 +1,5 @@
 all:
-	(cd gks-core; make all)
+	(cd gkm-core; make all)
 
 clean:
-	(cd gks-core; make clean)
+	(cd gkm-core; make clean)

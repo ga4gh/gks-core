@@ -1,6 +1,6 @@
 $schema: "https://json-schema.org/draft/2020-12/schema"
-$id: "https://w3id.org/ga4gh/schema/gks-core/1.2.0-ballot.2026-07.1/gks-core-source.yaml"
-title: GKS Core Class Definitions
+$id: "https://w3id.org/ga4gh/schema/gkm-core/1.2.0-ballot.2026-07.1/gkm-core-source.yaml"
+title: GKM Core Class Definitions
 strict: true
 
 $defs:
@@ -9,7 +9,7 @@ $defs:
     maturity: trial use
     description: Anything that exists, has existed, or will exist.
     $comment: >-
-      Entity is the root class of the 'gks-core' information model. All core classes that
+      Entity is the root class of the 'gkm-core' information model. All core classes that
       have ids and other general metadata like name, description, type, or extensions descend from
       this class and inherit its attributes.
     heritableProperties:
