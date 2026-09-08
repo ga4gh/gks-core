@@ -57,6 +57,11 @@ Some ConceptSet attributes are inherited from :ref:`Entity`.
       - :ref:`Extension`
       - 0..m
       - A list of extensions to the Entity, that allow for capture of information not directly supported by elements defined in the model.
+   *  - conceptSetType
+      -
+      - string
+      - 0..1
+      - A term indicating the type of concept being represented by the ConceptSet.
    *  - concepts
       -
                         .. raw:: html

@@ -2,7 +2,6 @@
    "$schema": "https://json-schema.org/draft/2020-12/schema",
    "$id": "https://w3id.org/ga4gh/schema/gkm-core/v1/json/Extension",
    "title": "Extension",
-   "type": "object",
    "maturity": "trial use",
    "description": "The Extension class provides entities with a means to include additional attributes that are outside of the specified standard but needed by a given content provider or system implementer. These extensions are not expected to be natively understood, but may be used for pre-negotiated exchange of message attributes between systems.",
    "properties": {
@@ -44,5 +43,6 @@
       "name",
       "value"
    ],
+   "type": "object",
    "additionalProperties": false
 }

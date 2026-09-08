@@ -1,9 +1,10 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/gkm-core/v1/json/ConceptMapping",
-   "title": "ConceptMapping",
+   "$id": "https://w3id.org/ga4gh/schema/gkm-core/v1/json/Element",
+   "title": "Element",
    "maturity": "trial use",
-   "description": "A mapping to a concept in a terminology or code system.",
+   "type": "object",
+   "description": "The base definition for all identifiable data objects.",
    "properties": {
       "id": {
          "type": "string",
@@ -17,27 +18,7 @@
          },
          "description": "A list of extensions to the Entity, that allow for capture of information not directly supported by elements defined in the model.",
          "$comment": "Extension objects have a key-value data structure that allows definition of custom fields in the data itself. Extensions are not expected to be natively understood, but may be used for pre-negotiated exchange of message attributes between systems."
-      },
-      "coding": {
-         "$ref": "/ga4gh/schema/gkm-core/v1/json/Coding",
-         "description": "A structured representation of a code for a defined concept in a terminology or code system."
-      },
-      "relation": {
-         "description": "A mapping relation between concepts as defined by the Simple Knowledge Organization System (SKOS).",
-         "type": "string",
-         "enum": [
-            "closeMatch",
-            "exactMatch",
-            "broadMatch",
-            "narrowMatch",
-            "relatedMatch"
-         ]
       }
    },
-   "required": [
-      "coding",
-      "relation"
-   ],
-   "type": "object",
-   "additionalProperties": false
+   "required": []
 }
