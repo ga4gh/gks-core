@@ -1,6 +1,7 @@
-.. note:: This data class is at a **trial use** maturity level and may \
-    change in future releases. Maturity \
-    levels are described in the :ref:`maturity-model`.
+.. admonition:: Trial Use
+    :class: note
+
+    May change in future releases. `Maturity Model </appendices/maturity_model.html>`_
 
 **Computational Definition**
 
@@ -76,7 +77,10 @@ Some MappableConcept attributes are inherited from :ref:`Entity`.
       - 0..m
       - A list of mappings to concepts in terminologies or code systems. Each mapping should include a coding and a relation.
 
-This class is defined as **any of** the following:
+This class must match **any of** the following:
 
 * an object with additional constraints
 * an object with additional constraints
+
+
+**Used in:** :ref:`ConceptSet`
