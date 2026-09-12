@@ -36,3 +36,11 @@ To run the tests:
 
     (from the root directory of the project)
     make test
+
+The suite validates example instances against the generated schemas. Valid
+examples live in [`examples/`](./examples) (registered in
+[`tests/test_definitions.yaml`](./tests/test_definitions.yaml)); instances that
+must be _rejected_ live in [`examples/invalid/`](./examples/invalid) (registered
+in [`tests/test_invalid_definitions.yaml`](./tests/test_invalid_definitions.yaml)).
+To cover a new case, drop a YAML instance in the appropriate directory and add a
+matching entry to its manifest.
